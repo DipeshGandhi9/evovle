@@ -1,0 +1,7 @@
+(function() {
+  'use strict';
+
+  angular
+    .module('evolve', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngAria', 'ui.router', 'ngMaterial', 'toastr']);
+
+})();

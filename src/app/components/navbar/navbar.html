@@ -1,13 +1,43 @@
-<md-toolbar layout="row" layout-align="center center">
+<md-toolbar layout="row" layout-align="center center" class="mainHeader">
 
-  <md-button href="https://github.com/Swiip/generator-gulp-angular">Gulp Angular</md-button>
+  <img src="assets/images/logo.png" alt="EVOLVE" width="150px" />
+  <!--<section flex layout="row" layout-align="right center">-->
+    <!--<md-button href="#" class="md-raised">Deposit</md-button>-->
+    <!--<md-button href="#" class="md-raised">Withdraw</md-button>-->
+    <!--<md-button href="#" class="md-raised">Psperos</md-button>-->
+    <!--<md-button href="#" class="md-raised">Language</md-button>-->
+  <!--</section>-->
+  <span flex="33" flex-md="{{ vm.box1Width }}"></span>
+  <md-button class="mg-raised btnLaunchWebtrader" >LAUNCH WEBTRADER</md-button>
+  <!--<md-menu-bar role="menubar" class="_md _md-keyboard-mode">-->
+    <!--<md-menu>-->
+      <!--<button> Deposit </button>-->
+    <!--</md-menu>-->
+    <!--<md-menu>-->
+      <!--<button > Withdraw </button>-->
+    <!--</md-menu>-->
+    <!--<md-menu>-->
+      <!--<button > Psperos </button>-->
+    <!--</md-menu>-->
+    <!--<md-menu>-->
+      <!--<button > Language </button>-->
+    <!--</md-menu>-->
+  <!--</md-menu-bar>-->
 
-  <section flex layout="row" layout-align="left center">
-    <md-button href="#" class="md-raised">Home</md-button>
-    <md-button href="#" class="md-raised">About</md-button>
-    <md-button href="#" class="md-raised">Contact</md-button>
-  </section>
+    <md-button class="navItem" ng-href="{{deposit}}">Deposit</md-button>
+    <md-button class="navItem" ng-href="{{withdraw}}">Withdraw</md-button>
+    <md-button class="navItem" ng-href="{{psperos}}">Psperos</md-button>
+    <md-button class="navItem" ng-href="{{language}}">Language</md-button>
 
-  <md-button class="acme-navbar-text">Application was created {{ vm.relativeDate }}.</md-button>
+
+    <!--<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">-->
+      <!--<md-nav-item md-nav-click="goto('page1')" name="page1">Page One</md-nav-item>-->
+      <!--<md-nav-item md-nav-click="goto('page2')" name="page2">Page Two</md-nav-item>-->
+      <!--<md-nav-item md-nav-click="goto('page3')" name="page3">Page Three</md-nav-item>-->
+    <!--</md-nav-bar>-->
+
+
+  <!--<md-button class="acme-navbar-text">Application was created {{ vm.relativeDate }}.</md-button>-->
+
 
 </md-toolbar>

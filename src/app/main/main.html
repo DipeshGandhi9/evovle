@@ -2,59 +2,21 @@
   <acme-navbar creation-date="main.creationDate"></acme-navbar>
 </header>
 
-<section class="mainContainer" style="max-width: 1340px;margin: 0 auto;">
+<section class="mainContainer containerWrapper">
   <div layout="row">
-    <div style="width: 250px">
-      <md-sidenav style="background-color: rgb(63,81,181);" id="aside" flex class="md-sidenav-left" md-component-id="left" md-is-locked-open="true"  md-disable-backdrop md-whiteframe="4">
-        <md-button class="md-button md-default-theme" >
-          <md-icon class="md-default-theme material-icons">&#xE7FC;</md-icon>
-          Accounts
-        </md-button>
-        <md-button class="md-button md-default-theme" >
-          <md-icon class="md-default-theme material-icons">&#xE2c4;</md-icon>
-          Platform Download
-        </md-button>
-        <md-button class="md-button md-default-theme" >
-          <md-icon class="md-default-theme material-icons">&#xE8D3;</md-icon>
-          Partners
-        </md-button>
-        <md-button class="md-button md-default-theme" >
-          <md-icon class="md-default-theme material-icons">&#xE8B8;</md-icon>
-          Global Settings
-        </md-button>
-        <md-button class="md-button md-default-theme" >
-          <md-icon class="md-default-theme material-icons">&#xE887;</md-icon>
-          Support
-        </md-button>
-        <div layout="row">
-          <md-button class="md-button md-default-theme" flex layout="column" layout-align="center center">
-            <md-icon class="md-default-theme material-icons no-padding">&#xE0C6;</md-icon>
-            <span>Live Chat</span>
-          </md-button>
-          <md-button class="md-button md-default-theme" flex layout="column" layout-align="center center">
-            <md-icon class="md-default-theme material-icons no-padding">&#xE8FD;</md-icon>
-            <span>Contact Us</span>
-          </md-button>
-        </div>
-        <md-button class="md-button md-default-theme" style="text-align:center;">
-          <!--<md-icon class="md-default-theme material-icons">&#xE1BC;</md-icon>-->
-          Refer a Friend
-        </md-button>
-      </md-sidenav>
+    <div class="sideMenuWrapper">
+      <asme-side-menu></asme-side-menu>
     </div>
     <div flex>
       <md-card>
         <md-card-content>
           <div layout="row">
-            <div layout-align="start center" flex="30" style="text-align: left">
+            <div class="accountSelectWrapper" layout-align="start center" flex="30">
               <md-input-container >
-                <md-select ng-model="selectedItem">
-                  <md-optgroup label="Accounts">
-                    <!--<md-option ng-value="item" ng-repeat="item in items">Item {{item}}</md-option>-->
-                    <md-option value="Live:35101(mBTC 2400)" >Live:35101(mBTC 2400)</md-option>
-                    <md-option value="Live:35101(mBTC 2400)" >Live:35101(mBTC 2400)</md-option>
-                    <md-option value="Demo:50001(mBTC 2400)" >Demo:50001(mBTC 2400)</md-option>
-                    <md-option value="Demo:5000(mBTC 2400)" >Demo:5000(mBTC 2400)</md-option>
+                <label>Account</label>
+                <md-select ng-model="account">
+                  <md-optgroup label="Accounts Home">
+                    <md-option ng-value="item" ng-repeat="item in accounts">{{item}}</md-option>
                   </md-optgroup>
                   <md-optgroup label=" + New Account">
                   </md-optgroup>
@@ -62,10 +24,10 @@
               </md-input-container>
             </div>
             <div layout="row" layout-xs="column" layout-align="end center" flex="">
-              <md-button class="md-raised md-primary">Deposit</md-button>
-              <md-button class="md-raised md-warn md-hue-2">Withdraw</md-button>
-              <md-button class="md-raised md-primary">Settings</md-button>
-              <md-button class="btnLaunchWebtrader">LAUNCH WEBTRADER</md-button>
+              <md-button ui-sref="deposit" class="md-raised md-primary">Deposit</md-button>
+              <md-button ui-sref="withdraw" class="md-raised md-warn md-hue-2">Withdraw</md-button>
+              <md-button ui-sref="settings" class="md-raised md-primary">Settings</md-button>
+              <md-button ui-sref="webtrader" class="btnLaunchWebtrader">LAUNCH WEBTRADER</md-button>
             </div>
           </div>
         </md-card-content>
@@ -73,47 +35,13 @@
 
       <md-card>
         <md-card-content>
-          <div style="height: 450px"></div>
+          <div class="dummyPlaceholder" style="height: 450px">
+            <h3 ng-if="stateParam != 'home'">You are on {{stateParam}} screen.</h3>
+          </div>
         </md-card-content>
       </md-card>
 
-      <div class="footerWrapper">
-        <div layout="row" layout-align="center start" style="margin:0px 8px 25px; padding:0px 25px; ">
-          <div layout="column" layout-align="center start" flex style="width: 150px;">
-            <a href="#" > Main Site </a>
-          </div>
-          <div layout="column" layout-align="start start" flex style="width: 150px;">
-            <a href="#"> Accounts </a>
-            <a href="#"> Deposit </a>
-            <a href="#"> Withdrawl </a>
-            <a href="#"> Download </a>
-          </div>
-          <div layout="column" layout-align="start start" flex style="width: 150px;">
-            <a href="#" > Markets </a>
-            <a href="#" > Leverage </a>
-            <a href="#" > Specifications </a>
-            <a href="#" > Trade Conditions </a>
-          </div>
-          <div layout="column" layout-align="start start" flex style="width: 150px;">
-            <a href="#"> Support </a>
-            <a href="#"> FAQ </a>
-            <a href="#"> Contactus </a>
-          </div>
-          <div layout="column" layout-align="start start" flex style="width: 150px;">
-            <a href="#" > Terms and Conditions </a>
-            <a href="#" > About us </a>
-            <a href="#" > Careers </a>
-          </div>
-          <div layout="column" layout-align="start start" flex style="width: 150px;">
-            <a href="#" flex> <img src="assets/images/logo-footer.png" alt="EVOLVE" width="120px" /> </a>
-            <a href="#"> social media links </a>
-          </div>
-        </div>
-      </div>
+      <acme-footer></acme-footer>
     </div>
   </div>
 </section>
-
-
-
-

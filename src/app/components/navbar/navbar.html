@@ -1,22 +1,22 @@
 <div>
   <md-toolbar>
-    <div layout-align="start center" layout="row" style="max-width:1340px;margin: 0 auto;width: 100%;height:80px;padding:0px 10px;">
+    <div layout-align="start center" layout="row" class="headerContainerWrapper">
       <div flex="33" flex-md="{{ vm.box1Width }}">
-        <img src="assets/images/logo.png" alt="EVOLVE" width="180px" />
+        <img src="assets/images/logo.png" alt="EVOLVE" width="180px" ng-click="goTo('home')"/>
       </div>
       <div flex layout-align="end center" layout="row">
         <md-button class="btnLaunchWebtrader" >LAUNCH WEBTRADER</md-button>
 
-        <md-button class="navItem" ng-href="{{deposit}}">Deposit</md-button>
-        <md-button class="navItem" ng-href="{{withdraw}}">Withdraw</md-button>
+        <md-button class="navItem" ng-href="{{deposit}}" ng-click="goTo('deposit')">Deposit</md-button>
+        <md-button class="navItem" ng-href="{{withdraw}}" ng-click="goTo('withdraw')">Withdraw</md-button>
         <md-button class="navItem" ng-href="{{psperos}}">Psperos</md-button>
         <md-button class="navItem" ng-href="{{language}}">Language</md-button>
       </div>
     </div>
   </md-toolbar>
-  <md-toolbar style="background-color: white;color: rgb(63,81,181);height: 40px;min-height:40px;font-size: 17px;font-weight: bold;">
-    <div layout-align="start center" layout="row" style="max-width:1340px;margin: 0 auto;width: 100%;height:80px;padding:0px 10px;">
-      Secure Client Area - Accounts
+  <md-toolbar class="siteMapWrapper">
+    <div layout-align="start center" layout="row" class="breadcrumb">
+      Secure Client Area - Accounts {{stateParam}}
     </div>
   </md-toolbar>
 </div>

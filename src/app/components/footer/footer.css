@@ -1,0 +1,16 @@
+.footerWrapper a{
+  font-size: 12px;
+  color: #666666;
+  margin:5px 0px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.footerContainer{
+  margin:0px 8px 25px;
+  padding:0px 25px;
+}
+
+.footerColumn{
+  width: 150px;
+}

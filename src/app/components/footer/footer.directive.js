@@ -3,17 +3,17 @@
 
   angular
     .module('evolve')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('acmeFooter', acmeFooter);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function acmeFooter() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
+      templateUrl: 'app/components/footer/footer.html',
       scope: {
-          creationDate: '='
+        creationDate: '='
       },
-      controller: NavbarController,
+      controller: FooterController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -21,19 +21,11 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment, $scope, $state) {
+    function FooterController(moment) {
       var vm = this;
 
       // "vm.creationDate" is available by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
-      $scope.stateParam;
-
-      if($state.$current)
-        $scope.stateParam = " - " + $state.$current.name;
-
-      $scope.goTo = function(route){
-        $state.go(route);
-      };
     }
   }
 

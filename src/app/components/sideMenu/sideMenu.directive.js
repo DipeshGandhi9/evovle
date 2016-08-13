@@ -3,17 +3,17 @@
 
   angular
     .module('evolve')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('asmeSideMenu', asmeSideMenu);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function asmeSideMenu() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
+      templateUrl: 'app/components/sideMenu/sideMenu.html',
       scope: {
-          creationDate: '='
+        creationDate: '='
       },
-      controller: NavbarController,
+      controller: SideMenuController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -21,19 +21,15 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment, $scope, $state) {
+    function SideMenuController(moment, $scope, toastr) {
       var vm = this;
 
       // "vm.creationDate" is available by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
-      $scope.stateParam;
 
-      if($state.$current)
-        $scope.stateParam = " - " + $state.$current.name;
-
-      $scope.goTo = function(route){
-        $state.go(route);
-      };
+      $scope.clickMe = function(value){
+        toastr.info('You Clicked ' + value);
+      }
     }
   }
 

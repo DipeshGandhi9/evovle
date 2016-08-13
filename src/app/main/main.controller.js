@@ -6,34 +6,15 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr, $mdSidenav) {
+  function MainController($timeout, $scope, $state) {
     var vm = this;
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1470850533834;
-    vm.showToastr = showToastr;
+    $scope.account;
+    $scope.stateParam;
+    $scope.accounts = ['Live:35101(mBTC 2400)', 'Live:34120(mBTC 2400)', 'Demo:50001(mBTC 2400)', 'Demo:5000(mBTC 2400)'];
 
-    activate();
+    if($state.$current)
+      $scope.stateParam = $state.$current.name;
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
-    }
-
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
-
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
-
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
-    }
   }
 })();

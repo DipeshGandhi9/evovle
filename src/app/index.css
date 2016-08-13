@@ -57,38 +57,28 @@ md-toolbar.md-default-theme {
   background-color: black;
 }
 
-/*section.jumbotron {*/
-  /*margin-bottom: 30px;*/
-  /*padding: 1px 30px;*/
-  /*background-color: #5aadbb;*/
-  /*text-align: center;*/
+.toast-info {
+  background-color: #666666;
+  color: #000000;
+}
 
-  /*color: white;*/
-/*}*/
+.toast-info .toast-progress{
+  background-color: #000000;
+}
 
-/*section.jumbotron h1 {*/
-  /*font-size: 3em;*/
-/*}*/
-
-/*.techs {*/
-  /*display: flex;*/
-  /*flex-flow: row wrap;*/
-/*}*/
-
-/*.techs md-card {*/
-  /*width: 30%;*/
-/*}*/
-
-/*.techs md-card img.pull-right {*/
-  /*float: right;*/
-  /*width: 100px;*/
-/*}*/
+.containerWrapper {
+  max-width: 1340px;margin: 0 auto;
+}
 
 section.mainContainer{
   margin-bottom: 30px;
   background-color: #edf0f5;
   text-align: center;
   color: white;
+}
+
+.sideMenuWrapper{
+  width: 250px
 }
 
 #aside{
@@ -100,6 +90,11 @@ section.mainContainer{
   min-height: 30px;
   line-height: 30px;
   font-size: 12px;
+  text-transform: none;
+}
+
+.md-sidenav-left{
+  background-color: rgb(63,81,181);
 }
 
 .md-sidenav-left .md-button {
@@ -117,9 +112,11 @@ section.mainContainer{
   padding: 0 !important;
 }
 
-.footerWrapper a{
-  font-size: 12px;
-  color: #666666;
-  margin:5px 0px;
-  text-decoration: none;
+.accountSelectWrapper{
+  text-align: left;
+}
+
+.dummyPlaceholder{
+  height: 450px;
+  color: #666666 !important;
 }

@@ -116,3 +116,10 @@ section.mainContainer{
 .no-padding{
   padding: 0 !important;
 }
+
+.footerWrapper a{
+  font-size: 12px;
+  color: #666666;
+  margin:5px 0px;
+  text-decoration: none;
+}

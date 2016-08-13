@@ -37,12 +37,13 @@
   font-feature-settings: 'liga';
 }
 
-html {
+html, body {
   font-family: 'Roboto Slab', serif;
+  background-color: #edf0f5;
 }
 
-[layout=row] {
-  flex-direction: row;
+.bgColorGray{
+  background-color: #edf0f5;
 }
 
 .browsehappy {
@@ -56,29 +57,62 @@ md-toolbar.md-default-theme {
   background-color: black;
 }
 
-section.jumbotron {
-  margin-bottom: 30px;
-  padding: 1px 30px;
-  background-color: #5aadbb;
-  text-align: center;
+/*section.jumbotron {*/
+  /*margin-bottom: 30px;*/
+  /*padding: 1px 30px;*/
+  /*background-color: #5aadbb;*/
+  /*text-align: center;*/
 
+  /*color: white;*/
+/*}*/
+
+/*section.jumbotron h1 {*/
+  /*font-size: 3em;*/
+/*}*/
+
+/*.techs {*/
+  /*display: flex;*/
+  /*flex-flow: row wrap;*/
+/*}*/
+
+/*.techs md-card {*/
+  /*width: 30%;*/
+/*}*/
+
+/*.techs md-card img.pull-right {*/
+  /*float: right;*/
+  /*width: 100px;*/
+/*}*/
+
+section.mainContainer{
+  margin-bottom: 30px;
+  background-color: #edf0f5;
+  text-align: center;
   color: white;
 }
 
-section.jumbotron h1 {
-  font-size: 3em;
+#aside{
+  margin: 8px !important;
+  width: auto;
 }
 
-.techs {
-  display: flex;
-  flex-flow: row wrap;
+.md-button{
+  min-height: 30px;
+  line-height: 30px;
+  font-size: 12px;
 }
 
-.techs md-card {
-  width: 30%;
+.md-sidenav-left .md-button {
+  text-align: left;
+  padding: 10px 10px;
+  margin: 0px;
 }
 
-.techs md-card img.pull-right {
-  float: right;
-  width: 100px;
+.md-sidenav-left md-icon {
+  color: white;
+  padding: 0 10px 0 10px;
+}
+
+.no-padding{
+  padding: 0 !important;
 }

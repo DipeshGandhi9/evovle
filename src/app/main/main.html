@@ -12,6 +12,7 @@
         <md-card-content>
           <div layout="row">
             <div class="accountSelectWrapper" layout-align="start center" flex="30">
+              <div layout="row">
               <md-input-container >
                 <label>Account</label>
                 <md-select ng-model="account">
@@ -22,12 +23,13 @@
                   </md-optgroup>
                 </md-select>
               </md-input-container>
+                </div>
             </div>
             <div layout="row" layout-xs="column" layout-align="end center" flex="">
               <md-button ui-sref="deposit" class="md-raised md-primary">Deposit</md-button>
               <md-button ui-sref="withdraw" class="md-raised md-warn md-hue-2">Withdraw</md-button>
               <md-button ui-sref="settings" class="md-raised md-primary">Settings</md-button>
-              <md-button ui-sref="webtrader" class="btnLaunchWebtrader">LAUNCH WEBTRADER</md-button>
+              <md-button ui-sref="webtrader" class="md-raised md-primary btnLaunchWebtrader">LAUNCH WEBTRADER</md-button>
             </div>
           </div>
         </md-card-content>

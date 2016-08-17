@@ -15,9 +15,9 @@
               <div layout="row">
               <md-input-container >
                 <label>Account</label>
-                <md-select ng-model="account">
+                <md-select ng-model="vm.account">
                   <md-optgroup label="Accounts Home">
-                    <md-option ng-value="item" ng-repeat="item in accounts">{{item}}</md-option>
+                    <md-option ng-value="item" ng-repeat="item in vm.accounts">{{item}}</md-option>
                   </md-optgroup>
                   <md-optgroup label=" + New Account">
                   </md-optgroup>
@@ -38,7 +38,7 @@
       <md-card>
         <md-card-content>
           <div class="dummyPlaceholder" style="height: 450px">
-            <h3 ng-if="stateParam != 'home'">You are on {{stateParam}} screen.</h3>
+            <h3 ng-if="vm.stateParam != 'home'">You are on {{vm.stateParam}} screen.</h3>
           </div>
         </md-card-content>
       </md-card>

@@ -12,22 +12,25 @@
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'vm'
       })
       .state('deposit', {
         url: "/deposit",
         templateUrl: 'app/main/main.html',
-        controller: 'MainController'
+        controller: 'MainController',
+        controllerAs: 'vm'
       })
       .state('withdraw', {
         url: "/withdraw",
         templateUrl: 'app/main/main.html',
-        controller: 'MainController'
+        controller: 'MainController',
+        controllerAs: 'vm'
       })
       .state('settings', {
         url: "/settings",
         templateUrl: 'app/main/main.html',
-        controller: 'MainController'
+        controller: 'MainController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');

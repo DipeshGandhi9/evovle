@@ -1,10 +1,10 @@
 <div>
   <md-toolbar class="navbarWrapper">
-    <div layout-align="start center" layout="row" class="headerContainerWrapper">
-      <div flex="33" flex-md="{{ vm.box1Width }}">
+    <div layout-align="start center" layout="row" layout-xs="row"  layout-align-xs="start center" class="headerContainerWrapper">
+      <div flex="33" flex-md="{{ vm.box1Width }}" flex-xs="33">
         <img src="assets/images/logo.png" alt="EVOLVE" width="180px" ng-click="goTo('home')"/>
       </div>
-      <div flex layout-align="end center" layout="row">
+      <div flex layout-align="end center" layout-align-xs="end center" layout-xs="row" layout-gt-xs="row">
         <md-button class="btnLaunchWebtrader" >LAUNCH WEBTRADER</md-button>
 
         <md-button class="navItem" ng-href="{{deposit}}" ng-click="goTo('deposit')">DEPOSIT</md-button>

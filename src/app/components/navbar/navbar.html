@@ -1,15 +1,38 @@
 <div>
   <md-toolbar class="navbarWrapper">
     <div layout-align="start center" layout="row" class="headerContainerWrapper">
-      <div flex="33" flex-md="{{ vm.box1Width }}">
+      <div flex="33" flex-md="{{ vm.box1Width }}" style="padding-top:5px;">
         <img src="assets/images/logo.png" alt="EVOLVE" width="180px" ng-click="goTo('home')"/>
       </div>
       <div flex layout-align="end center" layout="row">
-        <md-button class="btnLaunchWebtrader" >LAUNCH WEBTRADER</md-button>
-
+        <md-button class="navItem" >
+          <md-icon class="md-default-theme material-icons" style="margin-right: 10px;">&#xE30C;</md-icon>LAUNCH WEBTRADER
+        </md-button>
         <md-button class="navItem" ng-href="{{deposit}}" ng-click="goTo('deposit')">DEPOSIT</md-button>
         <md-button class="navItem" ng-href="{{withdraw}}" ng-click="goTo('withdraw')">WITHDRAW</md-button>
-        <md-button class="navItem" ng-href="{{psperos}}">PSPEROS</md-button>
+        <div>
+          <md-menu  md-offset="0 50">
+            <md-button ng-mouseover="$mdOpenMenu($event)">
+              PSPEROS
+            </md-button>
+            <md-menu-content width="2">
+              <md-menu-item>
+                <md-button>
+                  <div layout="row" flex>
+                    <md-icon class="md-default-theme material-icons" md-menu-align-target style="font-size:18px;margin-right:6px!important;  ">&#xE8B8;</md-icon>
+                    <span style="font-size:13px;">SETTINGS</span>
+                  </div>
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button>
+                  <md-icon class="md-default-theme material-icons" md-menu-align-target style="font-size:18px;margin-right:6px!important;"></md-icon>
+                  <span style="font-size:13px;">LOGOUT</span>
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </div>
         <md-button class="navItem" ng-href="{{language}}">LANGUAGE</md-button>
       </div>
     </div>

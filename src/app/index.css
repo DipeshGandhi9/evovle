@@ -136,6 +136,121 @@ section .container{
   background: url('../assets/images/main-section.png') ,url('../assets/images/graident.png') repeat  center;
 }
 
+#main-section h3{
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin-bottom: 0;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom: 1px solid #ecedee;
+}
+
+#main-section .container {
+  padding-bottom: 80px;
+}
+
+#main-section .price{
+  font-size: 20px;
+  color: #fff;
+  margin-top: 100px;
+}
+
+#features-section{
+  background-color:#fff;
+}
+
+#features-section .container{
+  padding:100px;
+}
+
+#app-link-section{
+  background: #fafafa; /* Old Browsers */
+  background: linear-gradient(to top, #fafafa, #ededef); /*Standard*/
+  background: -webkit-linear-gradient(bottom,#ededef,#fafafa); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom,#ededef,#fafafa); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom,#ededef,#fafafa); /*Fx 3.6-15*/
+}
+
+#app-link-section .container{
+  padding:0px 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#app-link-section .container  h2{
+  text-transform: uppercase;
+  margin: 50px 0 20px 0;
+  color: #41424f;
+}
+
+#app-link-section .container   p{
+  font-size: 15px;
+  line-height: 30px;
+  color: #8e8f9a;
+}
+
+#about-section{
+  background-color:#fff;
+}
+
+#about-section .container{
+  padding: 100px;
+}
+
+#about-section .container h2{
+  text-transform: uppercase;
+  margin: 50px 0 20px 0;
+  color: #41424f;
+}
+
+#about-section .container p{
+  font-size: 16px;
+  line-height: 30px;
+  color: #8e8f9a;
+}
+
+#about-section .container .layout-row:last-child{
+  margin-top: 40px;
+}
+
+#footer-section{
+  background-color: #fbfbfb;
+}
+
+#footer-section .container{
+  padding: 30px 100px;
+}
+
+#footer-section .container h4{
+  margin:10px 0px;
+}
+
+#footer-section .container  a{
+  color: #8e8f9a;
+  font-size:12px;
+}
+
+#copyright-section{
+  background-color: #fbfbfb;
+}
+
+#copyright-section .container{
+  padding: 0px 100px;
+}
+
+.footer-logo{
+  width: 150px;
+}
+.txt-color{
+  color: #8e8f9a;
+  font-size: smaller;
+}
+
+.m-t-30{
+  margin-top: 30px;
+}
+
 
 
 

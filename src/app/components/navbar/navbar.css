@@ -41,13 +41,13 @@
   /* Light*/
   /*background-color: #1976d2 !important; */
   /* Dark */
-  background-color: rgb(63,81,181) !important;
+  background-color: #004FAD !important;
   box-shadow: 0 1px 4px #333 !important;
 }
 
 .siteMapWrapper{
   background-color: white !important;
-  color: rgb(63,81,181) !important;
+  color: #004FAD !important;
   box-shadow: 0 1px 4px #666666;
   height: 34px;
   min-height: 34px;

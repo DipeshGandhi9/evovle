@@ -10,22 +10,22 @@
     <div flex>
       <md-card>
         <md-card-content>
-          <div layout="row">
+          <div layout="row" layout-sm="column" layout-xs="column">
             <div class="accountSelectWrapper" layout-align="start center" flex="30">
               <div layout="row" layout-xs="column">
               <md-input-container >
-                <label>Account</label>
+                <label>Select Account</label>
                 <md-select ng-model="vm.account">
                   <md-optgroup label="Accounts Home">
-                    <md-option ng-value="item" ng-repeat="item in vm.accounts">{{item}}</md-option>
+                    <md-option ng-value="item" ng-repeat="item in vm.liveAccountList">Live:{{item.id}}(mBTC 2400)</md-option>
                   </md-optgroup>
                   <md-optgroup label=" + New Account">
                   </md-optgroup>
                 </md-select>
               </md-input-container>
-                </div>
+              </div>
             </div>
-            <div layout="row" layout-xs="column" layout-align="end center" flex="">
+            <div layout="row" layout-xs="column" layout-align="end center" layout-align-sm="start center" flex="">
               <md-button ui-sref="deposit" class="md-raised md-primary">Deposit</md-button>
               <md-button ui-sref="withdraw" class="md-raised md-warn md-hue-2">Withdraw</md-button>
               <md-button ui-sref="settings" class="md-raised md-primary">Settings</md-button>
@@ -39,9 +39,93 @@
 
       <md-card>
         <md-card-content>
-          <div class="dummyPlaceholder" style="height: 450px">
-            <h3 ng-if="vm.stateParam != 'home'">You are on {{vm.stateParam}} screen.</h3>
+          <!--<div class="dummyPlaceholder">-->
+            <!--<h3 ng-if="vm.stateParam != 'home'">You are on {{vm.stateParam}} screen.</h3>-->
+          <!--</div>-->
+
+          <div layout="column">
+          <md-toolbar class="md-table-toolbar md-default">
+            <div class="md-toolbar-tools">
+              <span>Live Accounts</span>
+            </div>
+          </md-toolbar>
+
+          <!-- exact table from live demo -->
+          <md-table-container>
+            <table md-table  md-row-select ng-model="vm.selected" class="live-account">
+              <thead md-head>
+              <tr md-row>
+                <th md-column md-order-by="id"><span>Account ID</span></th>
+                <th md-column md-order-by="nameToLower"><span>Account Name</span></th>
+                <th md-column >Type</th>
+                <th md-column >Leverage</th>
+                <th md-column >Trades</th>
+                <th md-column>Pending Orders</th>
+                <th md-column >Open Orders</th>
+                <th md-column >Balance</th>
+              </tr>
+              </thead>
+              <tbody md-body>
+              <tr md-row ng-repeat="account in vm.liveAccountList" md-select="vm.openAccount(account)" md-auto-select>
+                <td md-cell>{{account.id}}</td>
+                <td md-cell>{{account.name}}</td>
+                <td md-cell>{{account.type}}</td>
+                <td md-cell>{{account.leverage}}</td>
+                <td md-cell>{{account.trades.value | number: 1}}</td>
+                <td md-cell>{{account.pending_orders.value}}</td>
+                <td md-cell>{{account.Open_order.value}}</td>
+                <td md-cell>{{account.balance.value}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </md-table-container>
+          <div layout="row" layout-align="center center" layout-padding layout-margin>
+            <a href="#/main">Add a new Trading Account</a>
           </div>
+        </div>
+
+
+        <div layout="column">
+          <md-toolbar class="md-table-toolbar md-default">
+            <div class="md-toolbar-tools">
+              <span>Demo Accounts</span>
+            </div>
+          </md-toolbar>
+
+          <!-- exact table from live demo -->
+          <md-table-container>
+            <table md-table md-row-select ng-model="vm.selected" class="demo-account">
+              <thead md-head>
+              <tr md-row>
+                <th md-column md-order-by="id"><span>Account ID</span></th>
+                <th md-column md-order-by="nameToLower"><span>Account Name</span></th>
+                <th md-column md-numeric>Type</th>
+                <th md-column md-numeric>Leverage</th>
+                <th md-column md-numeric>Trades</th>
+                <th md-column md-numeric>Pending Orders</th>
+                <th md-column md-numeric>Open Orders</th>
+                <th md-column md-numeric>Balance</th>
+              </tr>
+              </thead>
+              <tbody md-body>
+              <tr md-row md-auto-select ng-repeat="account in vm.liveAccountList">
+                <td md-cell>{{account.id}}</td>
+                <td md-cell>{{account.name}}</td>
+                <td md-cell>{{account.type}}</td>
+                <td md-cell>{{account.leverage}}</td>
+                <td md-cell>{{account.trades.value | number: 1}}</td>
+                <td md-cell>{{account.pending_orders.value}}</td>
+                <td md-cell>{{account.Open_order.value}}</td>
+                <td md-cell>{{account.balance.value}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </md-table-container>
+          <div layout="row" layout-align="center center" layout-padding layout-margin>
+            <a href="#/main">Add a new Trading Account</a>
+          </div>
+        </div>
+
         </md-card-content>
       </md-card>
 

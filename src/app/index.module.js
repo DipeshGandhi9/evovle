@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('evolve', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngAria', 'ui.router', 'ngMaterial', 'toastr']);
+    .module('evolve', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngAria', 'ui.router', 'ngMaterial', 'toastr', 'md.data.table']);
 
 })();

@@ -38,7 +38,7 @@
 }
 
 html, body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', serif;
   background-color: #edf0f5;
 }
 
@@ -96,7 +96,7 @@ section.mainContainer{
   /* Light*/
   /*background-color: #1976d2 !important; */
   /* Dark */
-  background-color: rgb(63,81,181) !important;
+  background-color: #004FAD !important;
   color: #ffffff;
 }
 
@@ -120,11 +120,9 @@ section.mainContainer{
 }
 
 .dummyPlaceholder{
-  height: 450px;
+  /*height: 450px;*/
   color: #666666 !important;
 }
-
-
 
 /* Home page */
 section .container{
@@ -255,3 +253,14 @@ section .container{
 
 
 /* Home page end */
+
+/*Account Data table*/
+
+.live-account td.md-cell md-checkbox{
+  display:none !important;
+}
+
+.demo-account td.md-cell md-checkbox{
+  display:none !important;
+}
+/*Account Data table end*/

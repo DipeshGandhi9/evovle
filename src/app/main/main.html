@@ -53,6 +53,7 @@
           <!-- exact table from live demo -->
           <md-table-container>
             <table md-table  md-row-select ng-model="vm.selected" class="live-account">
+              <div class="tableHeader">
               <thead md-head>
               <tr md-row>
                 <th md-column md-order-by="id"><span>Account ID</span></th>
@@ -65,6 +66,7 @@
                 <th md-column >Balance</th>
               </tr>
               </thead>
+              </div>
               <tbody md-body>
               <tr md-row ng-repeat="account in vm.liveAccountList" md-select="vm.openAccount(account)" md-auto-select>
                 <td md-cell>{{account.id}}</td>

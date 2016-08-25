@@ -1,5 +1,5 @@
 <section id="main-section">
-  <header>
+  <header style="padding-top:15px;">
     <md-toolbar style="max-width: 1340px;margin: 0px auto;background-color:transparent!important;">
       <div layout-align="start center" layout="row" layout-xs="row"  layout-align-xs="start center">
         <div flex="20" flex-md="{{ vm.box1Width }}" flex-xs="33">
@@ -14,7 +14,7 @@
         </div>
 
         <div flex="20" layout-align="end center" layout-align-xs="end center" layout-xs="row" layout-gt-xs="row">
-          <md-button >LOGIN</md-button>
+          <md-button ng-href="#main">LOGIN</md-button>
           <md-button >SIGNUP</md-button>
         </div>
       </div>
@@ -23,17 +23,14 @@
 
   <div class="container">
     <div layout="row" layout-align="center center" style="text-align: center;">
-        <h2 class="text-center">Forex, Commodities, Indices and crypto in <br> bitcoin</h2>
+        <h2 class="text-center" style="color: #ffffff;">Forex, Commodities, Indices and crypto in <br> bitcoin</h2>
     </div>
 
-    <div>
-
-    </div>
-    <div layout="row" layout-align="center center">
+    <div layout="row" layout-align="center center" style="width:350px; margin:15px auto;">
        <md-content md-theme="docs-dark" layout-gt-sm="column" layout-padding>
-         <div >
+         <!--<div >-->
            <h3 style="text-align:center;">GET STARTED</h3>
-         </div>
+         <!--</div>-->
          <form name="userForm">
            <div layout-gt-xs="row">
              <md-input-container class="md-block" flex-gt-xs>
@@ -67,8 +64,8 @@
              <!--</md-input-container>-->
            </div>
 
-           <div layout-gt-xs="row" layout-align="center center">
-             <p>By Creating an account you agree to our <a>terms &#38; conditions</a></p>
+           <div layout-gt-xs="row" layout-align="center center" style="font-size: 12px">
+             <p class="create-terms">By Creating an account you agree to our <a>terms &#38; conditions</a></p>
            </div>
 
          </form>

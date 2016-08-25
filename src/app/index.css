@@ -137,7 +137,7 @@ section .container{
 #main-section h3{
   background-color: #f9f9f9;
   padding: 30px;
-  margin-bottom: 0;
+  margin: -7px -7px 15px -7px;
   -webkit-border-top-right-radius: 3px;
   -moz-border-top-left-radius: 3px;
   border-top-left-radius: 3px;
@@ -152,6 +152,12 @@ section .container{
   font-size: 20px;
   color: #fff;
   margin-top: 100px;
+}
+
+#main-section .create-terms{
+  font-size: 10px;
+  color: #888888;
+  margin: 15px;
 }
 
 #features-section{
@@ -263,4 +269,13 @@ section .container{
 .demo-account td.md-cell md-checkbox{
   display:none !important;
 }
+
+.md-table thead.md-head{
+  background: #004FAD !important;
+}
+
+.md-table thead.md-head .md-column{
+  color: #ffffff;
+}
+
 /*Account Data table end*/

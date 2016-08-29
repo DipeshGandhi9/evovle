@@ -35,28 +35,28 @@
     vm.liveAccountList = [{
       "id": "35103",
       "name": "live mbtc",
-      "type": "classic",
       "leverage": "1:300",
-      "trades": { "value": 24.0 },
-      "pending_orders": { "value": 4.0 },
-      "Open_order": { "value": 87.0 },
-      "balance": { "value": 1.0 }
+      "balance": { "value": 1.0 },
+      "profit": { "value": 245.0 },
+      "free_margin": { "value": -253.45 }
       },
       {
         "id": "35117",
         "name": "Matic Kocevar",
-        "type": "classic",
         "leverage": "1:300",
-        "trades": { "value": 24.0 },
-        "pending_orders": { "value": 4.0 },
-        "Open_order": { "value": 87.0 },
-        "balance": { "value": 1.0 }
+        "balance": { "value": 1.0 } ,
+        "profit": { "value": 245.0 },
+        "free_margin": { "value": -253.45 }
       }
     ]
 
     vm.openAccount = function(selectedAccount){
        //console.log(selectedAccount.id + "clicked!!");
       $log.debug("Table row Click ", selectedAccount.id);
+    }
+    vm.signUpMessageVisible = false;
+    vm.hideSignUpMessage = function(){
+      vm.signUpMessageVisible = true;
     }
   }
 })();

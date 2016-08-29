@@ -23,11 +23,15 @@
 }
 
 .btnLaunchWebtrader {
+  width:165px;
+}
+
+/*.btnLaunchWebtrader {
   background-color:#00AA00 !important;
   margin:2px;
   padding: 0px 10px;
   font-size: 12px;
-}
+}*/
 
 .navItem{
   margin:2px;

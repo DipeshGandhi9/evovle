@@ -280,4 +280,49 @@ section .container{
   color: #ffffff;
 }
 
+.md-grey ,.md-grey :hover{
+  background-color:#767676 !important;
+  color: #ffffff !important;
+}
+
+.moreBtn{
+  font-weight:600;
+}
+.moreBtn :hover{
+  font-weight:bolder;
+}
+.addAccountBtn {
+  background-color:#00AA00 !important;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+#AccountDataTable .md-tab.md-active .tabLiveText{
+  color:#ff0000 !important;
+}
+
+#AccountDataTable .md-tab.md-active .tabAccountText{
+  color:#000 !important;
+}
+
+#AccountDataTable md-ink-bar{
+   top:0 !important;
+  color: #00AA00;
+  background: #00AA00;
+}
 /*Account Data table end*/
+/*Sign Up Message*/
+.signUpMessage{
+  background: #82cf85;
+  border:1px solid #767676;
+  border-radius:2px;
+  font-size:14px;
+  text-align:left;
+}
+.signUpMessage .closeBtn{
+ position:absolute;
+  right:0;
+  top:2px;
+}
+
+/*Sign Up Message End*/

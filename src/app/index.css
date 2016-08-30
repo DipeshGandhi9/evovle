@@ -311,6 +311,7 @@ section .container{
   background: #00AA00;
 }
 /*Account Data table end*/
+
 /*Sign Up Message*/
 .signUpMessage{
   background: #82cf85;
@@ -326,3 +327,27 @@ section .container{
 }
 
 /*Sign Up Message End*/
+
+/*Login */
+.md-green {
+ background-color:#00AA00 !important;
+ color: #ffffff !important;
+}
+
+.closeBtn{
+position:absolute;
+ right:0;
+ top:4px;
+}
+
+.loginDialog md-toolbar{
+  background-color:#00AA00  !important;
+}
+
+.loginDialog .actionBtnDiv span{
+  font-size:12px;
+}
+
+
+
+/*Login End*/

@@ -1,40 +1,51 @@
-<md-dialog aria-label="Login">
-  <form ng-cloak>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <h2>Login</h2>
-        <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
-          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
-    <md-dialog-content >
-      <div class="md-dialog-content" style="width: 450px">
-        <div layout-gt-xs="row">
-          <md-input-container class="md-block" flex-gt-xs>
-            <label>Email</label>
-            <input ng-model="user.email" />
-          </md-input-container>
-        </div>
+<md-dialog aria-label="Login" class="loginDialog">
+<form ng-cloak >
 
-        <div layout-gt-xs="row">
-          <md-input-container class="md-block" flex-gt-xs>
-            <label>Password</label>
-            <input ng-model="user.password" />
-          </md-input-container>
-        </div>
+    <md-toolbar layout="row" layout-padding layout-align="center center">
+        <span class="md-toolbar-item ">
+          <md-icon class="md-default-theme material-icons" >&#xE897;</md-icon>Log in
+        </span>
+        <md-button class="md-icon-button closeBtn" ng-click="cancel()">
+          <md-icon class="md-default-theme material-icons " aria-label="Close dialog">&#xE5CD;</md-icon>
+        </md-button>
+    </md-toolbar>
+
+    <md-dialog-content >
+      <div  style="width: 450px" layout="column" layout-margin layout-padding>
+
+            <div layout-gt-xs="row">
+              <md-input-container class="md-block" flex-gt-xs>
+                <label>Email</label>
+                <input ng-model="user.email" />
+              </md-input-container>
+            </div>
+
+            <div layout-gt-xs="row">
+              <md-input-container class="md-block" flex-gt-xs>
+                <label>Password</label>
+                <input ng-model="user.password" />
+              </md-input-container>
+            </div>
+
+            <div layout="row" layout-align="end center">
+                <md-button class="md-raised md-primary md-green" ng-href="#main" ng-click="hide()"> Login </md-button>
+            </div>
+
+            <div layout="row" layout-align="space-between center" class="actionBtnDiv">
+              <span>Don't have an account? Sign up</span>
+              <span>Forget password?</span>
+            </div>
 
       </div>
     </md-dialog-content>
-    <md-dialog-actions layout="row" layout-align="center center">
+    <!-- <md-dialog-actions layout="row" layout-align="end center">
 
       <div layout-gt-xs="row">
         <md-input-container class="md-block" flex-gt-xs>
-          <md-button class="md-raised md-primary" ng-href="#main" ng-click="hide()"> Login </md-button>
+          <md-button class="md-raised md-primary md-green" ng-href="#main" ng-click="hide()"> Login </md-button>
         </md-input-container>
       </div>
 
-    </md-dialog-actions>
-  </form>
+    </md-dialog-actions> -->
+</form>
 </md-dialog>

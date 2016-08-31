@@ -37,6 +37,11 @@
   font-feature-settings: 'liga';
 }
 
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
 html, body {
   font-family: 'Roboto', serif;
   background-color: #edf0f5;
@@ -337,7 +342,7 @@ section .container{
 .closeBtn{
 position:absolute;
  right:0;
- top:4px;
+ top:2px;
 }
 
 .loginDialog md-toolbar{

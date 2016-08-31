@@ -1,42 +1,49 @@
 <md-dialog aria-label="Login" class="loginDialog">
-<form ng-cloak >
+
 
     <md-toolbar layout="row" layout-padding layout-align="center center">
-        <span class="md-toolbar-item ">
-          <md-icon class="md-default-theme material-icons" >&#xE897;</md-icon>Log in
+        <span class="md-toolbar-item">
+          <md-icon class="md-default-theme material-icons md-18" >&#xE897;</md-icon> Log in
         </span>
         <md-button class="md-icon-button closeBtn" ng-click="cancel()">
-          <md-icon class="md-default-theme material-icons " aria-label="Close dialog">&#xE5CD;</md-icon>
+          <md-icon class="md-default-theme material-icons md-18 " aria-label="Close dialog">&#xE5CD;</md-icon>
         </md-button>
     </md-toolbar>
 
     <md-dialog-content >
-      <div  style="width: 450px" layout="column" layout-margin layout-padding>
+      <form name="loginForm" ng-cloak>
+        <div  style="width: 550px" layout="column" class="md-padding layout-margin">
 
-            <div layout-gt-xs="row">
-              <md-input-container class="md-block" flex-gt-xs>
-                <label>Email</label>
-                <input ng-model="user.email" />
-              </md-input-container>
-            </div>
+            <md-input-container>
+              <label>Email</label>
+              <input type="email" name="email"  ng-model="user.email" ng-required="true" ng-pattern="/^.+@.+\..+$/" />
+              <div ng-messages="loginForm.email.$error">
+                <div ng-message-exp="['required','pattern']">
+                  Your email must be look like an e-mail address.
+                </div>
+              </div>
+            </md-input-container>
 
-            <div layout-gt-xs="row">
-              <md-input-container class="md-block" flex-gt-xs>
-                <label>Password</label>
-                <input ng-model="user.password" />
-              </md-input-container>
-            </div>
+            <md-input-container >
+              <label>Password</label>
+              <input type="password" name="password"  ng-model="user.password" ng-required="true" />
+              <div ng-messages="loginForm.password.$error">
+                <div ng-message="required">This is required.</div>
+              </div>
+            </md-input-container>
+
 
             <div layout="row" layout-align="end center">
                 <md-button class="md-raised md-primary md-green" ng-href="#main" ng-click="hide()"> Login </md-button>
             </div>
 
-            <div layout="row" layout-align="space-between center" class="actionBtnDiv">
+            <div layout="row" layout-align="space-between center" class="actionBtnDiv txt-color">
               <span>Don't have an account? Sign up</span>
               <span>Forget password?</span>
             </div>
 
-      </div>
+        </div>
+      </form>
     </md-dialog-content>
     <!-- <md-dialog-actions layout="row" layout-align="end center">
 
@@ -47,5 +54,5 @@
       </div>
 
     </md-dialog-actions> -->
-</form>
+
 </md-dialog>

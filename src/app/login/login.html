@@ -5,13 +5,13 @@
         <span class="md-toolbar-item">
           <md-icon class="md-default-theme material-icons md-18" >&#xE897;</md-icon> Log in
         </span>
-        <md-button class="md-icon-button closeBtn" ng-click="cancel()">
+        <md-button class="md-icon-button closeBtn" ng-click="vm.cancel()">
           <md-icon class="md-default-theme material-icons md-18 " aria-label="Close dialog">&#xE5CD;</md-icon>
         </md-button>
     </md-toolbar>
 
     <md-dialog-content >
-      <form name="loginForm" ng-cloak>
+      <form name="loginForm" ng-submit="loginForm.$valid && vm.authenticate() " ng-cloak>
         <div  style="width: 550px" layout="column" class="md-padding layout-margin">
 
             <md-input-container>
@@ -34,7 +34,7 @@
 
 
             <div layout="row" layout-align="end center">
-                <md-button class="md-raised md-primary md-green" ng-href="#main" ng-click="hide()"> Login </md-button>
+                <md-button type="submit" class="md-raised  md-green"> Login </md-button>
             </div>
 
             <div layout="row" layout-align="space-between center" class="actionBtnDiv txt-color">

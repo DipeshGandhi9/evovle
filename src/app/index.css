@@ -352,6 +352,9 @@ position:absolute;
 .loginDialog .actionBtnDiv span{
   font-size:12px;
 }
+.loginDialog md-icon{
+  margin-bottom:5px;
+}
 
 
 

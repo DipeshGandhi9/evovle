@@ -11,7 +11,7 @@
     </md-toolbar>
 
     <md-dialog-content >
-      <form name="loginForm" ng-submit="loginForm.$valid && vm.authenticate() " ng-cloak>
+      <form name="loginForm" ng-submit="loginForm.$valid && vm.showAuthenticateModal() " ng-cloak>
         <div  style="width: 550px" layout="column" class="md-padding layout-margin">
 
             <md-input-container>
@@ -38,8 +38,8 @@
             </div>
 
             <div layout="row" layout-align="space-between center" class="actionBtnDiv txt-color">
-              <span>Don't have an account? Sign up</span>
-              <span>Forget password?</span>
+              <p>Don't have an account? <span ng-click="vm.showSignUpModal()">Sign up</span></p>
+              <span ng-click="vm.showResetPasswordModal()">Forget password?</span>
             </div>
 
         </div>

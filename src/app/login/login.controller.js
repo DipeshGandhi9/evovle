@@ -18,7 +18,7 @@
     vm.answer = function(answer) {
       $mdDialog.hide(answer);
     };
-    vm.authenticate = function(ev) {
+    vm.showAuthenticateModal = function(ev) {
       vm.hide();
       $mdDialog.show({
         controller: 'AuthenticateController',
@@ -36,7 +36,41 @@
         });
     }
 
+    vm.showSignUpModal = function(ev){
+      vm.hide();
+      $mdDialog.show({
+        controller: 'NewAccountController',
+        controllerAs: 'vm',
+        templateUrl: 'app/newAccount/newaccount.html',
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose:true,
+        fullscreen: false // Only for -xs, -sm breakpoints.
+      })
+        .then(function(answer) {
+          vm.status = 'You said the information was "' + answer + '".';
+        }, function() {
+          vm.status = 'You cancelled the dialog.';
+        });
+    }
 
+    vm.showResetPasswordModal = function(ev){
+      vm.hide();
+      $mdDialog.show({
+        controller: 'ResetPasswordController',
+        controllerAs: 'vm',
+        templateUrl: 'app/resetPassword/resetpassword.html',
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose:true,
+        fullscreen: false // Only for -xs, -sm breakpoints.
+      })
+        .then(function(answer) {
+          vm.status = 'You said the information was "' + answer + '".';
+        }, function() {
+          vm.status = 'You cancelled the dialog.';
+        });
+    }
 
   }
 })();

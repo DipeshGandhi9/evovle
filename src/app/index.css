@@ -333,10 +333,14 @@ section .container{
 
 /*Sign Up Message End*/
 
-/*Login */
+/*Home Dialog boxes */
 .md-green {
  background-color:#00AA00 !important;
  color: #ffffff !important;
+}
+.md-black{
+  background-color:#282F39 !important;
+  color:#ffffff !important;
 }
 
 .closeBtn{
@@ -345,17 +349,26 @@ position:absolute;
  top:2px;
 }
 
-.loginDialog md-toolbar{
-  background-color:#00AA00  !important;
+.actionBtnDiv span{
+  font-size:14px;
+  cursor: pointer;
 }
 
-.loginDialog .actionBtnDiv span{
-  font-size:12px;
+.loginDialog md-toolbar{
+  background-color:#00AA00 !important;
 }
+
 .loginDialog md-icon{
   margin-bottom:5px;
 }
 
+.resetPasswordDialog  md-toolbar{
+  background-color:#282F39 !important;
+  font-size: 18px !important;
+}
 
+.resetPasswordDialog md-icon{
+  margin-bottom:5px;
+}
 
-/*Login End*/
+/*Home Dialog boxes End*/

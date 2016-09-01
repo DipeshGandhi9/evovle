@@ -1,0 +1,45 @@
+<md-dialog aria-label="NewAccount">
+
+
+  <md-toolbar layout="row" layout-padding layout-align="center center">
+       <span class="md-toolbar-item" layout="row" layout-align="space-around center">
+           <img src="assets/images/logo.png" alt="EVOLVE" width="120px">
+          <span><hr style="width: 1px;height: 39px;margin: 0 15px;"></span>
+          <span> New Account</span>
+        </span>
+    <md-button class="md-icon-button closeBtn" ng-click="vm.cancel()">
+      <md-icon class="md-default-theme material-icons md-18 " aria-label="Close dialog">&#xE5CD;</md-icon>
+    </md-button>
+  </md-toolbar>
+
+  <md-dialog-content >
+    <form name="newAccountForm" ng-submit="newAccountForm.$valid" ng-cloak>
+      <div  style="width: 550px" layout="column" class="md-padding layout-margin">
+
+        <md-input-container>
+          <label>Email</label>
+          <input type="email" name="email"  ng-model="user.email" ng-required="true" ng-pattern="/^.+@.+\..+$/" />
+          <div ng-messages="newAccountForm.email.$error">
+            <div ng-message-exp="['required','pattern']">
+              Your email must be look like an e-mail address.
+            </div>
+          </div>
+        </md-input-container>
+
+        <md-input-container >
+          <label>Password</label>
+          <input type="password" name="password"  ng-model="user.password" ng-required="true" />
+          <div ng-messages="newAccountForm.password.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+
+        <div layout="row" layout-align="space-between center" class="actionBtnDiv txt-color">
+          <md-button type="submit" class="md-raised  md-green">Create Account</md-button>
+          <p>Have an account? <span ng-click="vm.showLoginModel()">Log In</span></p>
+        </div>
+
+      </div>
+    </form>
+  </md-dialog-content>
+</md-dialog>

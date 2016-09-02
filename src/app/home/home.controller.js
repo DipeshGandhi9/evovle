@@ -33,7 +33,7 @@
       $mdDialog.show({
         controller: 'NewAccountController',
         controllerAs: 'vm',
-        templateUrl: 'app/newAccount/newaccount.html',
+        templateUrl: 'app/newaccount/newAccount.html',
         parent: angular.element($document[0].body),
         targetEvent: $event,
         clickOutsideToClose:true,

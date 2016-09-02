@@ -41,7 +41,7 @@
       $mdDialog.show({
         controller: 'NewAccountController',
         controllerAs: 'vm',
-        templateUrl: 'app/newAccount/newaccount.html',
+        templateUrl: 'app/newaccount/newAccount.html',
         parent:  angular.element($document[0].body),
         targetEvent: ev,
         clickOutsideToClose:true,
@@ -59,7 +59,7 @@
       $mdDialog.show({
         controller: 'ResetPasswordController',
         controllerAs: 'vm',
-        templateUrl: 'app/resetPassword/resetpassword.html',
+        templateUrl: 'app/resetpassword/resetPassword.html',
         parent:  angular.element($document[0].body),
         targetEvent: ev,
         clickOutsideToClose:true,

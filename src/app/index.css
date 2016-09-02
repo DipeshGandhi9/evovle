@@ -45,6 +45,7 @@
 html, body {
   font-family: 'Roboto', serif;
   background-color: #edf0f5;
+  position:inherit!important;
 }
 
 .bgColorGray{
@@ -132,6 +133,10 @@ section.mainContainer{
 }
 
 /* Home page */
+#main-section, #features-section ,#app-link-section ,#about-section,#footer-section{
+   min-width: 1080px;
+}
+
 section .container{
   max-width: 1340px;
   margin: 0px auto;
@@ -369,6 +374,14 @@ position:absolute;
 
 .resetPasswordDialog md-icon{
   margin-bottom:5px;
+}
+
+.md-dialog-container{
+   position:fixed!important;
+}
+
+md-backdrop{
+ /*height:100%!important;*/
 }
 
 /*Home Dialog boxes End*/

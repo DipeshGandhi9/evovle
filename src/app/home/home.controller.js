@@ -6,19 +6,19 @@
     .controller('HomeController', HomeController);
 
   /** @ngInject */
-  function HomeController($state, $mdDialog) {
+  function HomeController($state, $mdDialog,$document) {
     var vm = this;
 
     if($state.$current)
       vm.stateParam = $state.$current.name;
 
-    vm.showLoginModel = function(ev) {
+    vm.showLoginModel = function($event) {
       $mdDialog.show({
         controller: 'LoginController',
         controllerAs: 'vm',
         templateUrl: 'app/login/login.html',
-        parent: angular.element(document.body),
-        targetEvent: ev,
+        parent: angular.element($document[0].body),
+        targetEvent: $event,
         clickOutsideToClose:true,
         fullscreen: false // Only for -xs, -sm breakpoints.
       })
@@ -29,13 +29,13 @@
         });
     };
 
-    vm.showSignUpModal = function(ev){
+    vm.showSignUpModal = function($event){
       $mdDialog.show({
         controller: 'NewAccountController',
         controllerAs: 'vm',
         templateUrl: 'app/newAccount/newaccount.html',
-        parent: angular.element(document.body),
-        targetEvent: ev,
+        parent: angular.element($document[0].body),
+        targetEvent: $event,
         clickOutsideToClose:true,
         fullscreen: false // Only for -xs, -sm breakpoints.
       })

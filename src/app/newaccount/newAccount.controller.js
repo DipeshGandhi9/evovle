@@ -9,7 +9,7 @@
     .controller('NewAccountController', NewAccountController);
 
   /** @ngInject */
-  function NewAccountController($mdDialog) {
+  function NewAccountController($mdDialog,$document) {
     var vm = this;
 
     vm.hide = function() {
@@ -27,7 +27,7 @@
         controller: 'LoginController',
         controllerAs: 'vm',
         templateUrl: 'app/login/login.html',
-        parent: angular.element(document.body),
+        parent: angular.element($document[0].body),
         targetEvent: ev,
         clickOutsideToClose:true,
         fullscreen: false // Only for -xs, -sm breakpoints.

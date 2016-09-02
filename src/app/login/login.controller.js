@@ -6,7 +6,7 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($mdDialog) {
+  function LoginController($mdDialog,$document) {
     var vm = this;
 
     vm.hide = function() {
@@ -24,7 +24,7 @@
         controller: 'AuthenticateController',
         controllerAs: 'vm',
         templateUrl: 'app/authentication/authenticate.html',
-        parent: angular.element(document.body),
+        parent: angular.element($document[0].body),
         targetEvent: ev,
         clickOutsideToClose:true,
         fullscreen: false // Only for -xs, -sm breakpoints.
@@ -42,7 +42,7 @@
         controller: 'NewAccountController',
         controllerAs: 'vm',
         templateUrl: 'app/newAccount/newaccount.html',
-        parent: angular.element(document.body),
+        parent:  angular.element($document[0].body),
         targetEvent: ev,
         clickOutsideToClose:true,
         fullscreen: false // Only for -xs, -sm breakpoints.
@@ -60,7 +60,7 @@
         controller: 'ResetPasswordController',
         controllerAs: 'vm',
         templateUrl: 'app/resetPassword/resetpassword.html',
-        parent: angular.element(document.body),
+        parent:  angular.element($document[0].body),
         targetEvent: ev,
         clickOutsideToClose:true,
         fullscreen: false // Only for -xs, -sm breakpoints.
